@@ -1,0 +1,23 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+{% block content %}
+<!--{% if session['logged_in'] %}
+<p>Jesteś już zalogowany/a!</p>
+{% else %}-->
+ <h1>Wpisz dane logowania:</h1>
+      <br>
+      <form action="" method="post" class="form-horizontal">
+        <input type="text" placeholder="user_id" name="user_id" value="{{
+          request.form.user_id }}">
+         <input type="password" placeholder="password" name="password" value="{{
+          request.form.password }}">
+        <input class="btn btn-default" type="submit" value="Zatwierdź">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Błąd:</strong> {{ error }}
+      {% endif %}
+<!--{% endif %}-->
+{% endblock %}
+
+
+

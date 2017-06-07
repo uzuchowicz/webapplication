@@ -1,0 +1,170 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="page-header">
+  <h1>Uzupełnij ankietę</h1>
+</div>
+
+<form role="form" action="/save" method="post">
+    <h3>Informacje o Tobie</h3>
+     <div class="form-group">
+        <label for="quest_id">Numer albumu:</label>
+        <input type="text" class="form-control" id="quest_id" name="quest_id" required>
+    </div>
+
+
+     <div class="form-group">
+        <label>Płeć:</label><br>
+        <input type="radio" name="sex" value="female"required> Kobieta<br>
+        <input type="radio" name="sex" value="male"required> Mężczyzna<br>
+    </div>
+
+    <div class="form-group">
+      <label for="faculty">Wydział:</label>
+      <select class="form-control" name="faculty" id="wydzial">
+        <option value="wgig">Wydział Górnictwa i Geoinżynierii</option>
+        <option value="wimip">Wydział Inżynierii Metali i Informatyki Przemysłowej</option>
+        <option value="weaiib">Wydział Elektrotechniki, Automatyki, Informatyki i Inżynierii Biomedycznej</option>
+        <option value ="wiet">Wydział Informatyki, Elektroniki i Telekomunikacji</option>
+        <option value="wimir">Wydział Inżynierii Mechanicznej i Robotyki</option>
+        <option value="wggios">Wydział Geologii, Geofizyki i Ochrony Środowiska</option>
+        <option value="wggiis">Wydział Geodezji Górniczej i Inżynierii Środowiska</option>
+        <option value="wimic">Wydział Inżynierii Materiałowej i Ceramiki</option>
+        <option value="wo">Wydział Odlewnictwa</option>
+        <option value="wwnig">Wydział Wiertnictwa, Nafty i Gazu</option>
+        <option value="wz">Wydział Zarządzania</option>
+        <option value="weip">Wydział Energetyki i Paliw</option>
+        <option value="wfis">Wydział Fizyki i Informatyki Stosowanej</option>
+        <option value="wm">Wydział Matematyki Stosowanej</option>
+        <option value="wh">Wydział Humanistyczny</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="field">Kierunek:</label>
+      <select class="form-control" name="field" id="kierunki">
+        <option>Górnictwo i geologia</option>
+      </select>
+    </div>
+
+     <div class="form-group">
+        <label>Stopień studiów:</label><br>
+        <input type="radio" name="degree" value="first"required> I<br>
+        <input type="radio" name="degree" value="second"required> II<br>
+    </div>
+
+    <h3>Twoje przemyślenia na temat studiów</h3>
+     <div class="form-group">
+        <label>Czy  uważasz, że posiadanie stopnia naukowego ułatwia zdobycie pracy w dziedzinie, w której się kształcisz?</label><br>
+        <input type="radio" name="degree_value" value="yes_er"required> Tak, wystarczy inżynier XD<br>
+        <input type="radio" name="degree_value" value="yes_mr"required> Tak, magister<br>
+        <input type="radio" name="degree_value" value="no"required> Nie<br>
+        <input type="radio" name="degree_value" value="dunno"required> Nie wiem<br>
+    </div>
+
+     <div class="form-group">
+        <label>Czy uważasz, że zdobywane przez Ciebie umiejętności w trakcie studiów są wystarczające, by znaleźć wymarzoną pracę?</label><br>
+        <input type="radio" name="work_skill" value="yes"required> Tak<br>
+        <input type="radio" name="work_skill" value="no"required> Nie<br>
+        <input type="radio" name="work_skill" value="dunno"required> Nie wiem<br>
+    </div>
+
+     <div class="form-group">
+        <label>Czy znasz wymagania pracodawców dotyczące umiejętności twardych oraz miękkich ich przyszłego pracownika (w dziedzinie, w kierunku której się kształcisz)?</label><br>
+        <input type="radio" name="skill_req" value="yes"required> Tak<br>
+        <input type="radio" name="skill_req" value="no"required> Nie<br>
+        <input type="radio" name="skill_req" value="dunno"required> Nie wiem<br>
+     </div>
+
+     <div class="form-group">
+        <label>Czy uważasz, że obecnie spełniasz wymagania Twojego przyszłego pracodawcy odnośnie pojętej wiedzy oraz nabytych umiejętności?</label><br>
+        <input type="radio" name="meet_req" value="yes"required> Tak<br>
+        <input type="radio" name="meet_req" value="no"required> Nie<br>
+        <input type="radio" name="meet_req" value="dunno"required> Nie wiem<br>
+     </div>
+
+     <div class="form-group">
+        <label>Czy poszukujesz możliwości rozwijania swoich umiejętności uczęszczając na dodatkowe warsztaty, szkolenia, wykłady, poszukując informacji w internecie itd.?</label><br>
+        <input type="radio" name="self_develop" value="yes"required> Tak<br>
+        <input type="radio" name="self_develop" value="no"required> Nie<br>
+        <input type="radio" name="self_develop" value="dunno"required> Nie wiem<br>
+     </div>
+
+     <div class="form-group">
+        <label>Czy podjąłeś się pracy w dziedzinie, w kierunku której się kształcisz?</label><br>
+        <input type="radio" name="job" value="yes"required> Tak<br>
+        <input type="radio" name="job" value="no"required> Nie<br>
+        <input type="radio" name="job" value="dunno"required> Nie wiem<br>
+     </div>
+
+     <div class="form-group">
+        <label>Czy poleciłbyś studiowanie Twojego kierunku?</label><br>
+        <input type="radio" name="recommend" value="yes"required> Tak<br>
+        <input type="radio" name="recommend" value="no"required> Nie<br>
+        <input type="radio" name="recommend" value="dunno"required> Nie wiem<br>
+     </div>
+
+    <button type="submit" class="btn btn-default">Zapisz</button>
+</form>
+
+<script>
+    var kierunki = {
+        "wgig":
+        ["Budownictwo","Górnictwo i Geologia","Inżynieria Środowiska","Zarządzanie i Inżynieria Produkcji"],
+        "wimip":
+        ["Edukacja Techniczo-Informatyczna","Informatyka Stosowana","Inżynieria Ciepła","Inżynieria Materiałowa","Inżynieria Obliczniowa","Metalurgia"],
+        "weaiib":
+        ["Automatyka i Robotyka","Elektrotechnika","Informatyka","Inżynieria Biomedyczna","Mikroelektronika w technice i medycynie"],
+        "wiet":
+        ["Electronics and Telecommunications","Elektronika","Elektronika i Telekomunikacja","Informatyka","Teleinformatyka"],
+        "wimir":
+        ["Automatyka i Robotyka","Inżnieria Akustyczna","Inżynieria Mechaniczna i Materiałowa","Mechanika i Budowa Maszyn","Mechatronics with English as instruction language","Mechatronika"],
+        "wggios":
+        ["Ekologiczne Źródła Energii","Geofizyka","Górnictwo i Geologia","Informatyka Stosowana","Inżynieria Środowiska","Ochrona Środowiska","Turystyka i Rekreacja"],
+        "wggiis":
+        ["Geodezja i Kartografia","Inżynieria Środowiska"],
+        "wimic":
+        ["Ceramika","Chemia Budowlana","Inżynieria Materiałowa","Technologia Chemiczna"],
+        "wo":
+        ["Metalurgia","Wirtotechnologia"],
+        "wwnig":
+        ["Górnictwo i Geologia","Inżynieria Naftowa i Gazownicza"],
+        "wz":
+        ["Informatyka i Ekonometria","Zarządzanie","Zarządzanie i Inżynieria Produkcji"],
+        "weip":
+        ["Energetyka","Technologia Chemiczna"],
+        "wfis":
+        ["Fizyka Medyczna","Fizyka Techniczna"],
+        "wm":
+        ["Matematyka"],
+        "wh":
+        ["Kulturoznawstwo","Informatyka Społeczna","Socjologia"]
+
+    }
+
+    var wydzialDOM = document.querySelector("#wydzial");
+    var kierunkiDOM = document.querySelector("#kierunki");
+
+    wydzialDOM.addEventListener("change", function (e) {
+        var value = wydzialDOM.options[wydzialDOM.selectedIndex].value;
+        console.log(value);
+
+        var length = kierunkiDOM.options.length;
+        for (i = 0; i < length; i++) {
+            kierunkiDOM.options.length=0;
+            kierunkiDOM.options[i] = null;
+       }
+        console.log(kierunki[value]);
+        for (var i = 0; i< kierunki[value].length; i++){
+            var opt = document.createElement('option');
+            opt.innerHTML = kierunki[value][i];
+            kierunkiDOM.appendChild(opt);
+        }
+
+
+
+    })
+</script>
+{% endblock %}

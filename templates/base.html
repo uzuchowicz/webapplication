@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+         <!-- Bootstrap core CSS -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/bootstrap-theme.min.css" rel="stylesheet">
+      <html xmlns="http://www.w3.org/1999/xhtml">
+    <!-- Custom styles for this template -->
+
+    <link href="static/css/theme.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ankieta</title>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+    <![endif]-->
+    
+  </head>
+
+  <body role="document">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+         <li><a href="/"><span class="glyphicon glyphicon-th" aria-hidden="true"></span>Strona główna</a></li>
+         <li class="dropdown">
+          <a href="/questionnaire" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ankieta <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <!--<li><a href="/archiwum"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>Archiwum</a></li>
+            <li><a href="/new_survey"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Nowe badanie</a></li>
+            <li role="separator" class="divider"></li>-->
+            <li><a href="/questionnaire"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Wypełnij ankietę</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="/load" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Statystyki <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <!--<li><a href="/archiwum"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>Baza pacjentek</a></li>
+            <li><a href="/patient">Dodaj pacjentkę</a></li>
+            <li role="separator" class="divider"></li>-->
+            <li><a href="/load">Zobacz statystyki</a></li>
+          </ul>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> Linki<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/" target="_blank"></a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="http://www.google.pl" target="_blank"></a></li>
+         </ul>
+        </li>
+         <li class="dropdown">
+          <a href="/login" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Konto<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/settings" target="_blank"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Ustawienia</a></li>
+            <li><a href="/logout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Wyloguj</a></li>
+          </ul>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+</div>
+
+
+    <div class="container theme-showcase" role="main">
+      {% block content %}{% endblock %}
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+  </body>
+</html>
